@@ -13,7 +13,7 @@ This pipeline runs through:
 -GAPIT with GLM & MLM
 -TASSEL with GLM & MLM
 
-All files and softwares are in the folder, so no installation of softwares are necessary.
+Installation of GAPIT, TASSEL, and Structure is necessary, download the pipeline folder and store softwares in it as pipeline is set to take and receive data from previous software results in appropriately named folders. 
 
 This pipeline enables the user to determine the correct population structure K-Value with the use of Structure & Evanno Method then uses two GWAS softwares to find significant SNP's. All SNP's are adjusted using the FDR p-value adjustment procedure, and results are merged from the GAPIT/TASSEL results and outputted to the results folder
 
