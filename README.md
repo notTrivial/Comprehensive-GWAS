@@ -33,7 +33,7 @@ Arg 6: the kinship matrix in proper TASSEL format (need number of individuals on
 
 
 Example Command
-Rscript Pipeline_May30.R ./Data/Greenhouse_Numeric_Genotype ./Data/genotype_GreenHouse_editedMar1.hmp.txt ./Data/greenHouse2020_editedMissing.txt ./Data/Kinship_GreenHouse_Mar1.txt ./Data/greenHouse2020_editedMissing_tassel.txt ./Data/Kinship_GreenHouse_Mar1_tassel.txt 
+Rscript Pipeline.R ./Data/Greenhouse_Numeric_Genotype ./Data/genotype_GreenHouse_editedMar1.hmp.txt ./Data/greenHouse2020_editedMissing.txt ./Data/Kinship_GreenHouse_Mar1.txt ./Data/greenHouse2020_editedMissing_tassel.txt ./Data/Kinship_GreenHouse_Mar1_tassel.txt 
 
 ############################################################
 References
