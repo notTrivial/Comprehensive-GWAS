@@ -3,37 +3,52 @@ GWAS Pipeline with GAPIT & TASSEL
 Created by Gabrielle Dagasso
 Version 0.4
 Date Created: May 5, 2020
-Date Updated: June 1, 2020
+Date Updated: June 25, 2020
+
+######################## INSTALLATION & SETUP ###################################
+
+Download the pipeline folder available here, the folder contains subfolders for which the pipeline takes in and outputs results. 
+
+Requires R v3.6.1, all R packages are installed automatically when running the RScript pipeline. 
+
+Installation of TASSEL, and Structure is necessary, download the pipeline folder and store softwares in it as pipeline is set to take and receive data from previous software results in appropriately named folders. Both must be installed in the pipeline folder.
+
+Structure - https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/html/structure.html
+TASSEL - https://www.maizegenetics.net/tassel
+
+For Structure you must update the mainparams file according to the numerical genotypic input data you have. To transform genotype data into numerical form one can use TASSEL with the following command
+
+./run_pipeline.pl -h [input data] -NumericalGenotypePlugin -endPlugin -export output -exportType ReferenceProbability
 
 
-############################################################
+########################## INFORMATION ##################################
 This pipeline runs through:
 -Structure
 -Evanno Method to determine best K Value 
 -GAPIT with GLM & MLM
 -TASSEL with GLM & MLM
+- GLMNET with LASSO method
 
-Installation of GAPIT, TASSEL, and Structure is necessary, download the pipeline folder and store softwares in it as pipeline is set to take and receive data from previous software results in appropriately named folders. 
-
-This pipeline enables the user to determine the correct population structure K-Value with the use of Structure & Evanno Method then uses two GWAS softwares to find significant SNP's. All SNP's are adjusted using the FDR p-value adjustment procedure, and results are merged from the GAPIT/TASSEL results and outputted to the results folder
+This pipeline enables the user to determine the correct population structure K-Value with the use of Structure & Evanno Method then uses both GAPIT & TASSEL to find significant SNP's. All SNP's are adjusted using the FDR p-value adjustment procedure, and results are merged from the GAPIT/TASSEL results and outputted to the results folder.
 
 For structure you must input the max value of K you wish to test for, and for each K structure repeats 10 times so as to have better results when using the Evanno method.
 
 
-############################################################
-Running the Pipeline
+############################ RUNNING THE PIPELINE ################################
 
 Takes in Arguments as follows
-Arg 1: is numeric genotype file with no marker names or headings
-Arg 2: is the normal genotype file
-Arg 3: is the phenotypic file
-Arg 4: is the Kinship matrix file
-Arg 5: The tassel formatted phenotype
-Arg 6: the kinship matrix in proper TASSEL format (need number of individuals on first line)
+Arg 1: numeric genotype file with no marker names or headings (as per Structure requirements)
+Arg 2: non-numeric genotype file
+Arg 3: phenotypic file
+Arg 4: Kinship matrix file
+Arg 5: TASSEL formatted phenotype file
+Arg 6: the kinship matrix in proper tassel format, need number of individuals on first line
+Arg 7: Numeric Genotype with SNP/Marker names
 
 
 Example Command
-Rscript Pipeline.R ./Data/Greenhouse_Numeric_Genotype ./Data/genotype_GreenHouse_editedMar1.hmp.txt ./Data/greenHouse2020_editedMissing.txt ./Data/Kinship_GreenHouse_Mar1.txt ./Data/greenHouse2020_editedMissing_tassel.txt ./Data/Kinship_GreenHouse_Mar1_tassel.txt 
+Rscript Pipeline_June25.R ./Data/Numeric_Geno_file ./Data/geno_file.hmp.txt ./Data/PHENO_FILE.txt ./Data/Kinship.txt ./Data/PHENO_FILE_TASSEL.txt ./Data/Kinship_Matrix.txt ./Data/numeric_genotype_WithSNPNames.txt
+
 
 ############################################################
 References
