@@ -32,7 +32,6 @@ This pipeline enables the user to determine the correct population structure K-V
 
 For structure you must input the max value of K you wish to test for, and for each K structure repeats 10 times so as to have better results when using the Evanno method.
 
-
 ############################ RUNNING THE PIPELINE ################################
 
 Takes in Arguments as follows
