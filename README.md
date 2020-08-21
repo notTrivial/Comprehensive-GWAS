@@ -2,6 +2,19 @@
 - Created by Gabrielle Dagasso & Dr. Lingling Jin
 - Version 0.4
 
+# INFORMATION 
+This pipeline runs through:
+- Structure
+- Evanno Method to determine best K Value 
+- GAPIT with GLM & MLM
+- TASSEL with GLM & MLM
+- GLMNET with LASSO method
+
+This pipeline enables the user to determine the correct population structure K-Value with the use of Structure & Evanno Method then uses both GAPIT & TASSEL to find significant SNP's. All SNP's are adjusted using the FDR p-value adjustment procedure, and results are merged from the GAPIT/TASSEL results and outputted to the results folder.
+
+For structure you must input the max value of K you wish to test for, and for each K structure repeats 10 times so as to have better results when using the Evanno method.
+
+
 # INSTALLATION & SETUP 
 
 Download the pipeline folder available here, the folder contains subfolders for which the pipeline takes in and outputs results. 
@@ -19,18 +32,6 @@ For Structure you must update the mainparams file according to the numerical gen
 
 > ./run_pipeline.pl -h [input data] -NumericalGenotypePlugin -endPlugin -export output -exportType ReferenceProbability
 
-
-# INFORMATION 
-This pipeline runs through:
-- Structure
-- Evanno Method to determine best K Value 
-- GAPIT with GLM & MLM
-- TASSEL with GLM & MLM
-- GLMNET with LASSO method
-
-This pipeline enables the user to determine the correct population structure K-Value with the use of Structure & Evanno Method then uses both GAPIT & TASSEL to find significant SNP's. All SNP's are adjusted using the FDR p-value adjustment procedure, and results are merged from the GAPIT/TASSEL results and outputted to the results folder.
-
-For structure you must input the max value of K you wish to test for, and for each K structure repeats 10 times so as to have better results when using the Evanno method.
 
 # RUNNING THE PIPELINE 
 
