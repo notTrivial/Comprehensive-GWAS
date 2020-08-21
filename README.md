@@ -1,6 +1,5 @@
-# GWAS_Pipeline
-GWAS Pipeline with GAPIT & TASSEL
-Created by Gabrielle Dagasso
+GWAS_Pipeline
+Created by Gabrielle Dagasso & Dr. Lingling Jin
 Version 0.4
 Date Created: May 5, 2020
 Date Updated: June 25, 2020
@@ -11,7 +10,7 @@ Download the pipeline folder available here, the folder contains subfolders for 
 
 Requires R v3.6.1, all R packages are installed automatically when running the RScript pipeline. 
 
-Installation of TASSEL, and Structure is necessary, download the pipeline folder and store softwares in it as pipeline is set to take and receive data from previous software results in appropriately named folders. Both must be installed in the pipeline folder.
+Installation of TASSEL, and Structure is necessary. Install both of these softwares within the downloaded pipeline folder as pipeline is set to run from this folder. The initial working directory is the downloaded pipeline folder, the RScript from there handles the current working directories. 
 
 Structure - https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/html/structure.html
 TASSEL - https://www.maizegenetics.net/tassel
