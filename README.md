@@ -15,6 +15,8 @@ Installation of TASSEL, and Structure is necessary. Install both of these softwa
 Structure - https://web.stanford.edu/group/pritchardlab/structure_software/release_versions/v2.3.4/html/structure.html
 TASSEL - https://www.maizegenetics.net/tassel
 
+There is a modified GAPIT source file within the pipeline folder, the pipeline script runs off of this one NOT the original GAPIT script.
+
 For Structure you must update the mainparams file according to the numerical genotypic input data you have. To transform genotype data into numerical form one can use TASSEL with the following command
 
 ./run_pipeline.pl -h [input data] -NumericalGenotypePlugin -endPlugin -export output -exportType ReferenceProbability
