@@ -1,8 +1,6 @@
 # GWAS_Pipeline
-Created by Gabrielle Dagasso & Dr. Lingling Jin
-Version 0.4
-Date Created: May 5, 2020
-Date Updated: June 25, 2020
+- Created by Gabrielle Dagasso & Dr. Lingling Jin
+- Version 0.4
 
 # INSTALLATION & SETUP 
 
