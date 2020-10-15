@@ -1,4 +1,4 @@
-# GWAS_Pipeline
+# Comprehensive-GWAS
 - Created by Gabrielle Dagasso & Dr. Lingling Jin
 - Version 0.4
 
